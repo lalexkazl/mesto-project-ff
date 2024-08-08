@@ -1,10 +1,10 @@
 import "./pages/index.css";
 import {
-	initialCards,
 	createCard,
 	deleteCard,
 	likeCard,
 } from "./scripts/card.js";
+import {initialCards,} from "./scripts/cards.js";
 import { openModal, closeModal } from "./scripts/modal.js";
 
 const cardsContainer = document.querySelector(".places__list");
