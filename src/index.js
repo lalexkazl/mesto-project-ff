@@ -1,12 +1,10 @@
 import "./pages/index.css";
 import { createCard, likeCard, deleteCard, getCardForDeletion } from "./scripts/card.js";
 import {
-	getUserInfo,
-	getInitialCards,
-	getInitialInfo,
 	editProfile,
 	postNewCard,
 	updateNewAvatar,
+	getInitialInfo,
 } from "./scripts/api.js";
 import { openModal, closeModal } from "./scripts/modal.js";
 import {
@@ -235,8 +233,7 @@ enableValidation(validationConfig);
 // Вызов функции отрисовки стартовой страницы
 let profileId;
 
-getInitialInfo();
-Promise.all([getUserInfo(), getInitialCards()])
+getInitialInfo()
 	.then((array) => {
 		const [userList, initialCards] = array;
 		profileTitle.textContent = userList.name;
